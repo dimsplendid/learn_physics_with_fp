@@ -7,9 +7,13 @@ type Time         = R
 type TimeInterval = R
 type Position     = R
 type Velocity     = R
+type Acceloration = Double
 
 type PositionFunction = Time -> Position
 type VelocityFunction = Time -> Velocity
+type AccelorationFunction = Time -> Acceloration
+
+type Derivative = (R -> R) -> (R -> R)
 
 avgVelocity1 :: Time -> Time -> PositionFunction -> Velocity
 avgVelocity1 t0 t1 x = (x t1 - x t0) / (t1 - t0)
