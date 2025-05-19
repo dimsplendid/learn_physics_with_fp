@@ -20,3 +20,7 @@ type Integration = (R -> R) -- funciton
                 -> R        -- lower limit
                 -> R        -- upper limit
                 -> R        -- result
+
+type AntiDerivative =  R        -- initial value
+                    -> (R -> R) -- function
+                    -> (R -> R) -- antiderivative of function
